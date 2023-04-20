@@ -4,7 +4,7 @@ import dominik from '../../public/dominik.png'
 
 export default function Banner() {
     return (
-        <div className="bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 w-screen h-[calc(100vh-12rem)] flex justify-around pt-12">
+        <div className="bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 h-[calc(100vh-12rem)] flex justify-around pt-12">
             <div className="w-1/3 h-full pt-32 flex flex-col gap-4">
                 <div>
                     <span className="font-bold text-xl">|</span>{' '}
