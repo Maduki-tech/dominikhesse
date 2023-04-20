@@ -24,7 +24,7 @@ export default function Banner() {
             <Image
                 src={dominik as HTMLImageElement}
                 alt="Picture of the author"
-                width={300}
+                width={450}
             />
         </div>
     )
