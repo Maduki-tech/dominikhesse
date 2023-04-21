@@ -4,7 +4,7 @@ import dominik from '../../public/dominik.png'
 
 export default function AboutMe() {
     return (
-        <div className="grid-cols-3 grid-rows-3 grid px-72 gap-12 py-12">
+        <div className="grid-cols-3 grid-rows-3 grid px-96 gap-12 py-12">
             <div className="col-span-1 row-span-3">
                 <Image
                     src={dominik as HTMLImageElement}

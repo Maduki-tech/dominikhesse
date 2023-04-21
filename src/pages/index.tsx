@@ -5,6 +5,7 @@ import Banner from '~/Components/Banner'
 import Navbar from '~/Components/Navbar'
 import Services from '~/Components/Services'
 import SocialMedia from '~/Components/SocialMedia'
+import Wahl from '~/Components/Wahl'
 
 const Home: NextPage = () => {
     return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
             </main>
             <AboutMe />
             <Services />
+            <Wahl/>
         </>
     )
 }
