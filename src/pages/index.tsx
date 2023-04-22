@@ -2,7 +2,10 @@ import { type NextPage } from 'next'
 import Head from 'next/head'
 import AboutMe from '~/Components/AboutMe'
 import Banner from '~/Components/Banner'
+import Footer from '~/Components/Footer'
+import Fragen from '~/Components/Fragen'
 import Navbar from '~/Components/Navbar'
+import Referenzen from '~/Components/Referenzen'
 import Services from '~/Components/Services'
 import SocialMedia from '~/Components/SocialMedia'
 import Wahl from '~/Components/Wahl'
@@ -24,6 +27,10 @@ const Home: NextPage = () => {
             <AboutMe />
             <Services />
             <Wahl/>
+            {/* <Bewertungen /> */}
+            <Referenzen/>
+            <Fragen/>
+            <Footer/>
         </>
     )
 }

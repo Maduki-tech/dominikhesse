@@ -38,7 +38,7 @@ export default function Navbar() {
 
                 {/* TODO: Add Hover and ICONS */}
                 <div className="flex gap-4">
-                    <button className='px-3 py-2 rounded-lg bg-gray-700 text-white'>Online-Nachhilfe</button>
+                    <Link href={'/Online-Nachhilfe'} className='px-3 py-2 rounded-lg bg-gray-700 text-white'>Online-Nachhilfe</Link>
                     <button className='px-3 py-2 rounded-lg bg-green-500 text-white'>Mathe Abi-Coach</button>
                 </div>
             </div>
