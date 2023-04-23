@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import logo from '../../public/Logo_Nachhilfe_Hesse.svg'
-import {FiArrowRightCircle} from 'react-icons/fi'
+import { FiArrowRightCircle } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 
 export default function Navbar() {
     return (
@@ -23,16 +24,23 @@ export default function Navbar() {
             </div>
 
             <div className="py-6 flex items-center justify-around px-96">
-            <Link href="/">
-                <Image
-                    src={logo as HTMLImageElement}
-                    alt="Picture of the Logo"
-                    width={300}
-                />
-            </Link>
-
+                <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                >
+                    <Link href="/">
+                        <Image
+                            src={logo as HTMLImageElement}
+                            alt="Picture of the Logo"
+                            width={300}
+                        />
+                    </Link>
+                </motion.div>
                 <div className="flex gap-4 text-lg font-semibold">
-                    <Link href="/#aboutMe" scroll={false}>Über mich</Link>
+                    <Link href="/#aboutMe" scroll={false}>
+                        Über mich
+                    </Link>
 
                     <Link href="/#Testimonials">Testimonials</Link>
                 </div>
@@ -46,7 +54,10 @@ export default function Navbar() {
                         Online-Nachhilfe
                         <FiArrowRightCircle className="inline-block ml-2" />
                     </Link>
-                    <Link href={'https://matheabicoach.de/'} className="px-3 py-2 rounded-lg bg-green-500 text-white flex items-center">
+                    <Link
+                        href={'https://matheabicoach.de/'}
+                        className="px-3 py-2 rounded-lg bg-green-500 text-white flex items-center"
+                    >
                         Mathe Abi-Coach
                         <FiArrowRightCircle className="inline-block ml-2" />
                     </Link>
