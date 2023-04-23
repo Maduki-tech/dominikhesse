@@ -1,14 +1,12 @@
+import Link from 'next/link'
 import React from 'react'
-import Footer from '~/Components/Footer'
-import Fragen from '~/Components/Fragen'
-import Navbar from '~/Components/Navbar'
+import { Url } from 'url'
 
 export default function Onlinenachhilfe() {
     return (
         <div>
-            <Navbar />
-            <main className="px-52">
-                <div className="py-32">
+            <section className="md:px-52 xl:px-96">
+                <div className="py-8">
                     <h1 className=" text-5xl text-green-500">
                         <span className="text-stone-500">Online</span>Nachhilfe
                     </h1>
@@ -23,6 +21,7 @@ export default function Onlinenachhilfe() {
                         title="Einzel-Online-Nachhilfe"
                         preis={30}
                         preisDauer="pro 45 Minuten"
+                        buttonHref="https://api.whatsapp.com/send/?phone=4917644469647&text=Hey+Dominik%2C+ich+interesiere+mich+f%C3%BCr+eine+45-min%C3%BCtige+Nachhilfe-Stunde+f%C3%BCr+30%E2%82%AC.+Melde+dich+doch+gerne+einmal+bei+mir%21+&type=phone_number&app_absent=0"
                         leistungen={[
                             'Gratis-Bonus: Aufzeichnung',
                             'Optional: angepasste Lernmaterialien (5€ Aufpreis)',
@@ -32,6 +31,7 @@ export default function Onlinenachhilfe() {
                         title="Nachhilfe-Abo"
                         preis={99}
                         preisDauer="pro Monat"
+                        buttonHref={'https://api.whatsapp.com/send/?phone=4917644469647&text=Hey+Dominik%2C+ich+interesiere+mich+f%C3%BCr+das+Nachhilfe-Abo+f%C3%BCr+99%E2%82%AC+pro+Monat.+Melde+dich+doch+gerne+einmal+bei+mir%21+&type=phone_number&app_absent=0'}
                         leistungen={[
                             'bis zu vier Unterrichts-Stunden pro Monat möglich',
                             'Gratis-Bonus: Aufzeichnung',
@@ -39,32 +39,30 @@ export default function Onlinenachhilfe() {
                         ]}
                     />
                 </div>
-                <div className='py-4'>
-
-                <span className='text-green-500 font-semibold text-xl'>
-                    {'///'} Hinweis: Vorrausetzung für die Online-Nachhilfe
-                </span>
-                <p className='text-lg text-stone-500'>
-                    Eine stabile Internetverbindung und ein PC, Tablet oder
-                    Smartphone mit Kamera/Webcam und Mikrofon
-                </p>
+                <div className="py-4">
+                    <span className="text-green-500 font-semibold text-xl">
+                        {'///'} Hinweis: Vorrausetzung für die Online-Nachhilfe
+                    </span>
+                    <p className="text-lg text-stone-500">
+                        Eine stabile Internetverbindung und ein PC, Tablet oder
+                        Smartphone mit Kamera/Webcam und Mikrofon
+                    </p>
                 </div>
-            </main>
-            <Fragen/>
-            <Footer />
-            
+            </section>
         </div>
     )
 }
 
+
 interface priceProps {
     title: string
     preis: number
+    buttonHref: string | Url
     preisDauer: string
     leistungen: string[]
 }
 
-function PriceElement({ title, preis, preisDauer, leistungen }: priceProps) {
+function PriceElement({ title, preis, buttonHref, preisDauer, leistungen }: priceProps) {
     return (
         <div className="bg-gray-100 rounded-md overflow-hidden ">
             <div className="w-full py-8 text-white bg-green-500 text-center text-3xl font-semibold">
@@ -95,13 +93,14 @@ function PriceElement({ title, preis, preisDauer, leistungen }: priceProps) {
                 )}
             </ul>
             <div className="flex justify-center items-end py-4">
-                <button
+                <Link
+                href={buttonHref}
                     className={`${
                         leistungen.length < 3 ? 'bg-green-500' : 'bg-gray-500'
                     } px-2 py-3 text-center rounded-lg text-white font-semibold`}
                 >
                     Jetzt Buchen! (Hier Klicken!)
-                </button>
+                </Link>
             </div>
         </div>
     )

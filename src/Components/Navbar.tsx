@@ -5,7 +5,7 @@ import logo from '../../public/Logo_Nachhilfe_Hesse.svg';
 
 export default function Navbar() {
     return (
-        <nav>
+        <nav className='border-b '>
             <div className="flex flex-wrap items-center justify-between bg-stone-600 p-6">
                 <div className="mr-6 flex flex-shrink-0 items-center text-white">
                     <span className="text-md font-thin tracking-tight">
@@ -33,7 +33,6 @@ export default function Navbar() {
 
                     <Link href="/">Testimonials</Link>
 
-                    <Link href="/">Gratis testen</Link>
                 </div>
 
                 {/* TODO: Add Hover and ICONS */}

@@ -5,6 +5,7 @@ import Banner from '~/Components/Banner'
 import Footer from '~/Components/Footer'
 import Fragen from '~/Components/Fragen'
 import Navbar from '~/Components/Navbar'
+import Onlinenachhilfe from '~/Components/OnlineNachhilfe'
 import Referenzen from '~/Components/Referenzen'
 import Services from '~/Components/Services'
 import SocialMedia from '~/Components/SocialMedia'
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
             </main>
             <AboutMe />
             <Services />
+            <Onlinenachhilfe/>
             <Wahl/>
             {/* <Bewertungen /> */}
             <Referenzen/>
