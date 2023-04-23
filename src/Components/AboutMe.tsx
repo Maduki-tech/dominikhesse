@@ -1,15 +1,19 @@
 import Image from 'next/image'
 import React from 'react'
-import dominik from '../../public/dominik.png'
+import dominik from '../../public/dominik_with_bg.jpg'
+import { FaRocket } from 'react-icons/fa'
 
 export default function AboutMe() {
     return (
-        <div className="grid-cols-3 grid-rows-3 grid px-96 gap-12 py-12">
-            <div className="col-span-1 row-span-3">
+        <div id='aboutMe' className="grid-cols-3 grid-rows-3 grid px-96 gap-2 py-12">
+
+            <div className="col-span-1 row-span-3 rounded-md overflow-hidden"
+                style={{ width: '100%', height: '100%', position: 'relative' }}
+            >
                 <Image
+                    alt="Mountains"
                     src={dominik as HTMLImageElement}
-                    width={350}
-                    alt="Picture of the author"
+                    fill
                 />
             </div>
 
@@ -32,16 +36,20 @@ export default function AboutMe() {
                     Extremhindernisläufe (oder auch Obstacle Course Racing).
                 </p>
             </div>
-            <div className="col-span-2 row-span-1 bg-lime-500 p-4 rounded-md">
-                <div className="h-1/3 w-1/3">ICON</div>
-                <span className="text-white text-xl font-semibold">
-                    Meine Mission
-                </span>
+            <div className="col-span-2 row-span-1 bg-lime-500 p-4 rounded-md flex flex-col gap-4">
+                <div className="h-1/3 w-1/3">
+                    <FaRocket className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                    <span className="text-white text-xl font-semibold">
+                        Meine Mission
+                    </span>
 
-                <p className="text-white">
-                    Schülerinnen und Schüler interaktiv beim Lernen
-                    unterstützen.
-                </p>
+                    <p className="text-white">
+                        Schülerinnen und Schüler interaktiv beim Lernen
+                        unterstützen.
+                    </p>
+                </div>
             </div>
         </div>
     )

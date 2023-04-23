@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { Url } from 'url'
+import { type Url } from 'url'
 
 export default function Onlinenachhilfe() {
     return (
@@ -31,7 +31,9 @@ export default function Onlinenachhilfe() {
                         title="Nachhilfe-Abo"
                         preis={99}
                         preisDauer="pro Monat"
-                        buttonHref={'https://api.whatsapp.com/send/?phone=4917644469647&text=Hey+Dominik%2C+ich+interesiere+mich+f%C3%BCr+das+Nachhilfe-Abo+f%C3%BCr+99%E2%82%AC+pro+Monat.+Melde+dich+doch+gerne+einmal+bei+mir%21+&type=phone_number&app_absent=0'}
+                        buttonHref={
+                            'https://api.whatsapp.com/send/?phone=4917644469647&text=Hey+Dominik%2C+ich+interesiere+mich+f%C3%BCr+das+Nachhilfe-Abo+f%C3%BCr+99%E2%82%AC+pro+Monat.+Melde+dich+doch+gerne+einmal+bei+mir%21+&type=phone_number&app_absent=0'
+                        }
                         leistungen={[
                             'bis zu vier Unterrichts-Stunden pro Monat möglich',
                             'Gratis-Bonus: Aufzeichnung',
@@ -53,7 +55,6 @@ export default function Onlinenachhilfe() {
     )
 }
 
-
 interface priceProps {
     title: string
     preis: number
@@ -62,7 +63,13 @@ interface priceProps {
     leistungen: string[]
 }
 
-function PriceElement({ title, preis, buttonHref, preisDauer, leistungen }: priceProps) {
+function PriceElement({
+    title,
+    preis,
+    buttonHref,
+    preisDauer,
+    leistungen,
+}: priceProps) {
     return (
         <div className="bg-gray-100 rounded-md overflow-hidden ">
             <div className="w-full py-8 text-white bg-green-500 text-center text-3xl font-semibold">
@@ -94,7 +101,7 @@ function PriceElement({ title, preis, buttonHref, preisDauer, leistungen }: pric
             </ul>
             <div className="flex justify-center items-end py-4">
                 <Link
-                href={buttonHref}
+                    href={buttonHref}
                     className={`${
                         leistungen.length < 3 ? 'bg-green-500' : 'bg-gray-500'
                     } px-2 py-3 text-center rounded-lg text-white font-semibold`}

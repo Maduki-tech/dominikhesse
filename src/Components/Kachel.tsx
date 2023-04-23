@@ -1,10 +1,13 @@
+import Link from "next/link"
+import { type Url } from "url"
 
 interface KachelProps {
     title: string
     text: string
+    buttonHref?: string | Url
     button?: boolean
 }
-export function Kachel({ title, text, button }: KachelProps) {
+export function Kachel({ title, text,buttonHref, button }: KachelProps) {
     return (
         <div className="bg-white rounded-lg shadow-xl px-20 py-8 text-center flex flex-col items-center justify-center gap-4 hover:bg-gray-100 transition-all duration-200 hover:scale-105">
             <div className="w-32 h-32 bg-green-500 rounded-full relative">
@@ -27,7 +30,12 @@ export function Kachel({ title, text, button }: KachelProps) {
             <hr className="w-full text-gray-600 border-t-2" />
             <p className="text-gray-600 text-xl">{text}</p>
 
-            {button && (
+            {button && buttonHref !== undefined && (
+                <Link href={buttonHref} className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit">
+                    Los Geht
+                </Link>
+            )}
+            {button && buttonHref === undefined && (
                 <button className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit">
                     Los Geht
                 </button>

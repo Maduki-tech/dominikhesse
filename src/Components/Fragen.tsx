@@ -22,6 +22,7 @@ export default function Fragen() {
                 <Kachel
                     title="Whatsapp Chat"
                     text="Du kannst mich auch über Whatsapp erreichen."
+                    buttonHref='https://api.whatsapp.com/send?phone=4917644469647&text=Hey%20Dominik,%20ich%20interessiere%20mich%20f%C3%BCr%20deine%20Online-Nachhilfe.%20Melde%20dich%20doch%20gerne%20einmal%20bei%20mir!'
                     button={true}
                 />
             </div>
