@@ -78,8 +78,8 @@ export default function Footer() {
             <div className="grid grid-cols-1 xl:grid-cols-3 xl:px-96 py-8 place-items-center bg-stone-600 border-t border-white text-white gap-4">
                 <div>@ 2023 - Nachhilfe Heße</div>
                 <div>
-                    <Link href={'impressum'}>Impressum</Link> |{' '}
-                    <Link href={'datenschutz'}>Datenschutz</Link>
+                    <Link href={'/imprint'}>Impressum</Link> |{' '}
+                    <Link href={'/privacy'}>Datenschutz</Link>
                 </div>
                 <div>
                     Made by{' '}
