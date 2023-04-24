@@ -21,18 +21,17 @@ const Home: NextPage = () => {
             </Head>
             <Navbar />
             <main className="">
-
-            <Banner />
-            <SocialMedia />
+                <Banner />
+                <SocialMedia />
             </main>
             <AboutMe />
             <Services />
-            <Onlinenachhilfe/>
-            <Wahl/>
+            <Onlinenachhilfe />
+            <Wahl />
             {/* <Bewertungen /> */}
-            <Referenzen/>
-            <Fragen/>
-            <Footer/>
+            <Referenzen />
+            <Fragen />
+            <Footer />
         </>
     )
 }

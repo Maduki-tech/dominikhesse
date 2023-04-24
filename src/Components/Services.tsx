@@ -1,5 +1,5 @@
-import React from 'react'
-import { Kachel } from './Kachel'
+import React from 'react';
+import { Kachel } from './Kachel';
 
 export default function Services() {
     return (
@@ -9,7 +9,7 @@ export default function Services() {
             </h5>
 
             <h1 className="text-4xl text-gray-600">Warum Nachhilfe Heße? </h1>
-            <div className="flex gap-8 px-96">
+            <div className="flex flex-col md:grid md:grid-cols-3 xl:flex-row gap-8 px-4 md:px-8 xl:px-96">
                 <Kachel
                     title="Optimal vorbereitet"
                     text="Wir erstellen dir individ. Lernmaterialien für deine nächsten Klausuren, damit du optimal vorbereitet bist."
@@ -26,5 +26,6 @@ export default function Services() {
                 />
             </div>
         </section>
-    )
+    );
 }
+

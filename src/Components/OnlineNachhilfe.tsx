@@ -5,18 +5,18 @@ import { type Url } from 'url'
 export default function Onlinenachhilfe() {
     return (
         <div>
-            <section className="md:px-52 xl:px-96">
+            <section className="px-4 md:px-52 xl:px-96">
                 <div className="py-8">
                     <h1 className=" text-5xl text-green-500">
-                        <span className="text-stone-500">Online</span>Nachhilfe
+                        <span className="text-stone-500">Online </span>Nachhilfe
                     </h1>
-                    <p className="text-2xl text-stone-500 w-1/2 pt-4">
+                    <p className="text-2xl text-stone-500 w-full md:w-1/2 pt-4">
                         Entscheide dich zwischen einer einmaligen
                         Online-Nachhilfe-Stunde und der Nachhilfe im Abo
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2  gap-8 py-8">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 py-8">
                     <PriceElement
                         title="Einzel-Online-Nachhilfe"
                         preis={30}
@@ -68,6 +68,7 @@ function PriceElement({
     preis,
     buttonHref,
     preisDauer,
+
     leistungen,
 }: priceProps) {
     return (

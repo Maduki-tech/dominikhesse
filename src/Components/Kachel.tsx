@@ -1,5 +1,6 @@
-import Link from "next/link"
-import { type Url } from "url"
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { type Url } from 'url'
 
 interface KachelProps {
     title: string
@@ -7,9 +8,15 @@ interface KachelProps {
     buttonHref?: string | Url
     button?: boolean
 }
-export function Kachel({ title, text,buttonHref, button }: KachelProps) {
+export function Kachel({ title, text, buttonHref, button }: KachelProps) {
     return (
-        <div className="bg-white rounded-lg shadow-xl px-20 py-8 text-center flex flex-col items-center justify-center gap-4 hover:bg-gray-100 transition-all duration-200 hover:scale-105">
+        <motion.div
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-lg shadow-xl px-20 py-8 text-center flex flex-col items-center justify-center gap-4 hover:bg-gray-100 transition-all duration-200 hover:scale-105"
+        >
             <div className="w-32 h-32 bg-green-500 rounded-full relative">
                 <span className="absolute inset-0 flex items-center justify-center mt-4">
                     <svg
@@ -31,16 +38,18 @@ export function Kachel({ title, text,buttonHref, button }: KachelProps) {
             <p className="text-gray-600 text-xl">{text}</p>
 
             {button && buttonHref !== undefined && (
-                <Link href={buttonHref} className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit">
+                <Link
+                    href={buttonHref}
+                    className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit hover:bg-green-500"
+                >
                     Los Geht
                 </Link>
             )}
             {button && buttonHref === undefined && (
-                <button className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit">
+                <button className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit hover:bg-green-500">
                     Los Geht
                 </button>
             )}
-
-        </div>
+        </motion.div>
     )
 }

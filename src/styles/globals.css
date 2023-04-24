@@ -24,3 +24,16 @@
   transition: opacity 300ms, transform 300ms;
 }
 
+
+ul li::before {
+  content: "✓ ";
+  color: white;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+ul li:hover::before {
+  color: green;
+}
+
+

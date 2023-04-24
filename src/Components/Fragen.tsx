@@ -3,22 +3,23 @@ import { Kachel } from './Kachel'
 
 export default function Fragen() {
     return (
-        <div className="grid grid-cols-2 px-96 gap-8 place-items-center bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:px-96 px-2 gap-8 place-items-center bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 py-8">
             <div>
-                <div className="flex-col flex text-white gap-8 w-3/4">
-                    <span className="text-3xl">Hast du Fragen?</span>
-                    <span className="text-xl font-thin">
+                <div className="flex flex-col text-white gap-8 w-full md:w-3/4">
+                    <span className="text-2xl md:text-3xl">Hast du Fragen?</span>
+                    <span className="text-md md:text-xl font-thin">
                         Dann schreibe mir eine Nachricht über das
                         Kontaktformular und ich werde mich dann so schnell wie
                         möglich bei dir melden.
                     </span>
 
-                    <button className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit">
+                    <button className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit border-gray-700 border
+                        hover:bg-gray-100 hover:border hover:border-black hover:text-green-500">
                         Los Geht
                     </button>
                 </div>
             </div>
-            <div>
+            <div className="mt-8 md:mt-0">
                 <Kachel
                     title="Whatsapp Chat"
                     text="Du kannst mich auch über Whatsapp erreichen."
@@ -29,3 +30,4 @@ export default function Fragen() {
         </div>
     )
 }
+
