@@ -3,7 +3,7 @@ import { Kachel } from './Kachel'
 
 export default function Fragen() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:px-96 px-2 gap-8 place-items-center bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:px-24 2xl:px-96 px-2 gap-8 place-items-center bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 py-8">
             <div>
                 <div className="flex flex-col text-white gap-8 w-full md:w-3/4">
                     <span className="text-2xl md:text-3xl">Hast du Fragen?</span>

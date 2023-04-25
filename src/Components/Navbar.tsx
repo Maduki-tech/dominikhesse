@@ -69,8 +69,8 @@ export default function Navbar() {
 
     return (
         <nav className="border-b relative">
-            <div className="flex flex-wrap items-center justify-between bg-stone-600 p-4 xl:p-6 xl:px-96">
-                <div className="mr-6 flex flex-shrink-0 items-center text-white">
+            <div className="flex flex-wrap items-center justify-between bg-stone-600 p-4 xl:p-6 xl:px-24 2xl:px-96">
+                <div className="mr-6 flex flex-shrink-0 items-center text-white mx-auto">
                     <span className="text-md font-thin tracking-tight">
                         Nachhilfe in{' '}
                         <span className="font-semibold">Mathematik</span>,{' '}
@@ -78,7 +78,7 @@ export default function Navbar() {
                         <span className="font-semibold">Wirtschaft</span>
                     </span>
                 </div>
-                <div className="flex flex-wrap items-center justify-center text-white">
+                <div className="hidden md:flex flex-wrap items-center justify-center text-white">
                     {/* TODO: ADD ICONS */}
                     +49176/44469647 |{' '}
                     <a href="mailto:info@dominikhesse.de">
@@ -87,19 +87,35 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-between p-4 xl:px-96">
+            <div className="flex items-center justify-evenly px-8 xl:px-96">
+                <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className="py-4 w-full xl:w-auto "
+                >
+                    <Link href="/">
+                        <Image
+                            src={logo as HTMLImageElement}
+                            alt="Picture of the Logo"
+                            width={300}
+                        />
+                    </Link>
+                </motion.div>
                 <button
-                    className="text-xl font-bold focus:outline-none xl:hidden"
+                    className="text-xl font-bold py-2 focus:outline-none xl:hidden "
                     onClick={toggleMenu}
                 >
                     <HamburgerIcon isOpen={isMenuOpen} />
                 </button>
+
+
             </div>
 
             <div
                 className={`${
                     isMenuOpen ? 'block' : 'hidden'
-                } xl:flex xl:items-center items-center xl:justify-evenly absolute right-0 w-1/2 xl:w-auto bg-opacity-80 bg-white px-6 xl:px-96 xl:bg-transparent xl:py-0 xl:relative`}
+                } xl:flex items-center xl:justify-evenly absolute right-0 w-1/2 xl:w-auto bg-opacity-80 bg-white xl:px-24 px-96 xl:bg-transparent xl:py-0 xl:relative`}
                 style={{
                     zIndex: 10,
                     top: '100%',
@@ -111,7 +127,7 @@ export default function Navbar() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="py-4"
+                    className="py-4 w-full xl:w-auto"
                 >
                     <Link href="/">
                         <Image
@@ -143,19 +159,18 @@ export default function Navbar() {
                 <div className="flex flex-col gap-4 xl:flex-row xl:gap-4">
                     <Link
                         href={'/Online-Nachhilfe'}
-                        className="px-3 py-2 rounded-lg border border-gray-700 bg-gray-700 text-white flex items-center
+                        className="px-2 py-2 h-fit rounded-lg border border-gray-700 bg-gray-700 text-white flex items-center
                         hover:bg-gray-100 hover:border hover:border-black hover:text-green-500"
                     >
-                        Online-Nachhilfe
+                        <span className='w-full text-sm'>Online Nachhilfe</span>
                         <FiArrowRightCircle className="inline-block ml-2" />
                     </Link>
                     <Link
                         href={'https://matheabicoach.de/'}
-                        className="px-3 py-2 border border-green-500 rounded-lg bg-green-500 text-white flex items-center
-                       
+                        className="px-3 py-2 text-sm h-fit border border-green-500 rounded-lg bg-green-500 text-white flex items-center
                         hover:bg-gray-700 hover:border hover:border-black hover:text-white"
                     >
-                        Mathe Abi-Coach
+                        Mathe Abi Coach
                         <FiArrowRightCircle className="inline-block ml-2" />
                     </Link>
                 </div>

@@ -1,20 +1,25 @@
-import Image from 'next/image';
-import React from 'react';
-import dominik from '../../public/dominik_with_bg.jpg';
-import { FaRocket } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import Image from 'next/image'
+import React from 'react'
+import dominik from '../../public/dominik_with_bg.jpg'
+import { FaRocket } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 export default function AboutMe() {
     return (
         <div
             id="aboutMe"
-            className="grid grid-cols-1 xl:grid-cols-5 xl:grid-rows-3 px-4 md:px-8 xl:px-96 gap-2 py-12"
+            className="grid grid-cols-1 xl:grid-cols-5 xl:grid-rows-3 px-4 md:px-8 xl:px-24 2xl:px-96 gap-2 py-12"
         >
             <div
                 className="xl:col-span-2 xl:row-span-3 rounded-md overflow-hidden"
                 style={{ width: '100%', height: '100%', position: 'relative' }}
             >
-                <Image alt="Mountains" src={dominik as HTMLImageElement} layout="responsive" objectFit="cover" />
+                <Image
+                    alt="Mountains"
+                    src={dominik as HTMLImageElement}
+                    layout="responsive"
+                    objectFit="cover"
+                />
             </div>
 
             <div className="xl:col-span-3 xl:row-span-2 py-12 px-10 bg-gray-200 rounded-md">
@@ -58,6 +63,5 @@ export default function AboutMe() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
-

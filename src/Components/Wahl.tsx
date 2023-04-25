@@ -17,7 +17,7 @@ export default function Wahl() {
 
     return (
         <div className="bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 flex flex-col gap-8 justify-around py-12 px-2">
-            <div className="w-full h-full flex flex-col gap-4 px-4 md:px-24 xl:px-96">
+            <div className="w-full h-full flex flex-col gap-4 px-4 md:px-24 xl:px-24 2xl:px-96">
                 <div>
                     <span className="font-bold text-6xl text-white">|</span>
                     <span className="text-white text-2xl md:text-4xl xl:text-5xl">
@@ -39,7 +39,7 @@ export default function Wahl() {
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row md:px-24 xl:px-96 gap-8 w-full">
+            <div className="flex flex-col md:flex-row md:px-24 2xl:px-96 gap-8 w-full">
                 <Kachel
                     title="Online Nachhilfe"
                     text="Entscheide dich zwischen einer Nachhilfe-Stunde und Nachhilfe im Abo."

@@ -5,7 +5,7 @@ import { type Url } from 'url'
 export default function Onlinenachhilfe() {
     return (
         <div>
-            <section className="px-4 md:px-52 xl:px-96">
+            <section className="px-4 md:px-52 xl:px-24 2xl:px-96">
                 <div className="py-8">
                     <h1 className=" text-5xl text-green-500">
                         <span className="text-stone-500">Online </span>Nachhilfe

@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 export default function Banner() {
     return (
-        <div className="bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 h-[calc(100vh-16.5rem)] flex flex-col md:flex-row justify-around items-center p-4 xl:pt-12 xl:px-96">
-            <div className="w-full md:w-1/3 h-full flex flex-col gap-4">
-                <div>
+        <div className="bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 h-[calc(100vh-16.5rem)] flex flex-col md:flex-row justify-around items-center p-4 xl:pt-12 xl:px-24 2xl:px-96">
+            <div className="w-full md:w-1/3 h-full flex flex-col gap-8 md:gap-4 justify-center xl:justify-normal">
+                <div className='text-center xl:text-start'>
                     <span className="font-bold text-xl">|</span>{' '}
                     <span className="text-white text-lg">
                         Willkommen bei Nachhilfe Hesse
@@ -43,7 +43,7 @@ export default function Banner() {
                 className='w-full hidden h-full md:flex flex-col justify-center items-center'
             >
                 <Image
-                    alt="Mountains"
+                    alt="Bild von Dominik Hesse"
                     src={dominik as HTMLImageElement}
                     fill
                     objectFit="contain"

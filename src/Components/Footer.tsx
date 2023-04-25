@@ -7,7 +7,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 export default function Footer() {
     return (
         <div>
-            <div className="bg-stone-600 w-full grid px-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:px-96 justify-items-center py-8 gap-4">
+            <div className="bg-stone-600 w-full grid px-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:px-24 2xl:px-96 justify-items-center py-8 gap-4">
                 <div>
                     <Image
                         src={logo as HTMLImageElement}
