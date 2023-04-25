@@ -87,7 +87,7 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className="flex items-center justify-evenly px-8 xl:px-96">
+            <div className="flex items-center md:hidden justify-evenly px-8 xl:px-96">
                 <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -115,11 +115,11 @@ export default function Navbar() {
             <div
                 className={`${
                     isMenuOpen ? 'block' : 'hidden'
-                } xl:flex items-center xl:justify-evenly absolute right-0 w-1/2 xl:w-auto bg-opacity-80 bg-white xl:px-24 px-96 xl:bg-transparent xl:py-0 xl:relative`}
+                } xl:flex items-center xl:justify-evenly absolute right-0 w-1/2 xl:w-auto bg-opacity-80 bg-white xl:px-24 2xl:px-96 p-2 xl:bg-transparent xl:py-0 xl:relative`}
                 style={{
                     zIndex: 10,
                     top: '100%',
-                    transition: 'all 0.3s ease-in-out',
+                    transition: 'all 0.5s ease-in-out',
                     backdropFilter: 'blur(10px)',
                 }}
             >
@@ -127,7 +127,7 @@ export default function Navbar() {
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="py-4 w-full xl:w-auto"
+                    className="py-4 w-full xl:w-auto hidden md:block"
                 >
                     <Link href="/">
                         <Image
