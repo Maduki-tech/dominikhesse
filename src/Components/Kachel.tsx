@@ -40,6 +40,7 @@ export function Kachel({ title, text, buttonHref, button }: KachelProps) {
             {button && buttonHref !== undefined && (
                 <Link
                     href={buttonHref}
+                    scroll={false}
                     className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit hover:bg-green-500"
                 >
                     Los Geht

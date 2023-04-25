@@ -43,12 +43,14 @@ export default function Wahl() {
                 <Kachel
                     title="Online Nachhilfe"
                     text="Entscheide dich zwischen einer Nachhilfe-Stunde und Nachhilfe im Abo."
+                    buttonHref={'#/OnlineNachhilfe'}
                     button={true}
                 />
 
                 <Kachel
                     title="Mathe Abi-Coach Vorbereitungskurse"
                     text="Lernen die wichtigsten Mathe-Skills für deine Abschlussprüfung."
+                    buttonHref={'https://matheabicoach.de/'}
                     button={true}
                 />
             </div>

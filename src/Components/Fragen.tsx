@@ -1,5 +1,6 @@
 import React from 'react'
 import { Kachel } from './Kachel'
+import Link from 'next/link'
 
 export default function Fragen() {
     return (
@@ -13,10 +14,12 @@ export default function Fragen() {
                         möglich bei dir melden.
                     </span>
 
-                    <button className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit border-gray-700 border
+                    <Link
+                    href={'https://api.whatsapp.com/send?phone=4917644469647&text=Hey%20Dominik,%20ich%20interessiere%20mich%20f%C3%BCr%20deine%20Online-Nachhilfe.%20Melde%20dich%20doch%20gerne%20einmal%20bei%20mir!'}
+                    className="bg-gray-700 px-6 py-2 text-white rounded-lg w-fit border-gray-700 border
                         hover:bg-gray-100 hover:border hover:border-black hover:text-green-500">
                         Los Geht
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className="mt-8 md:mt-0">
