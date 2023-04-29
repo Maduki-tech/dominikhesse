@@ -7,7 +7,8 @@ import Link from 'next/link';
 
 export default function Banner() {
     return (
-        <div className="bg-gradient-to-br from-lime-500 via-lime-600 to-lime-700 h-[calc(100vh-16.5rem)] flex flex-col md:flex-row justify-around items-center p-4 xl:pt-12 xl:px-24 2xl:px-96">
+        <div className='bg-hero-pattern'>
+        <div className="bg-gradient-to-br from-primary/80 via-lime-600/80 to-primary/80 h-[calc(100vh-16.5rem)] flex flex-col md:flex-row justify-around items-center p-4 xl:pt-12 xl:px-24 2xl:px-96">
             <div className="w-full md:w-1/3 h-full flex flex-col gap-8 md:gap-4 justify-center xl:justify-normal">
                 <div className='text-center xl:text-start'>
                     <span className="font-bold text-xl">|</span>{' '}
@@ -25,7 +26,7 @@ export default function Banner() {
                     href={'/#aboutMe'}
                     scroll={false}
                     className="animate-bounce hover:animate-none px-3 py-2 border border-gray-700 rounded-lg bg-gray-700 text-white flex items-center justify-center
-                        w-fit hover:bg-gray-100 hover:border hover:border-black hover:text-green-500 self-center md:self-start"
+                        w-fit hover:bg-gray-100 hover:border hover:border-black hover:text-primary self-center md:self-start"
                 >
                     <FiArrowDownCircle className="inline-block mr-2" />
                     Erfahre Mehr
@@ -49,6 +50,7 @@ export default function Banner() {
                     objectFit="contain"
                 />
             </motion.div>
+        </div>
         </div>
     );
 }

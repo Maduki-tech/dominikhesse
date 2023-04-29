@@ -14,6 +14,7 @@ export default function AboutMe() {
                 className="xl:col-span-2 xl:row-span-3 rounded-md overflow-hidden"
                 style={{ width: '100%', height: '100%', position: 'relative' }}
             >
+                {/* TODO: add signature to the image */}
                 <Image
                     alt="Mountains"
                     src={dominik as HTMLImageElement}
@@ -23,7 +24,7 @@ export default function AboutMe() {
             </div>
 
             <div className="xl:col-span-3 xl:row-span-2 py-12 px-10 bg-gray-200 rounded-md">
-                <h6 className="text-xl font-semibold text-green-500">
+                <h6 className="text-xl font-semibold text-primary">
                     {'///'} Über mich
                 </h6>
                 <h1 className="text-xl font-semibold">Hey, ich bin Dominik</h1>

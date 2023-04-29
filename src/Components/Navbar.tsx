@@ -69,7 +69,7 @@ export default function Navbar() {
 
     return (
         <nav className="border-b relative">
-            <div className="flex flex-wrap items-center justify-between bg-stone-600 p-4 xl:p-6 xl:px-24 2xl:px-96">
+            <div className="flex flex-wrap items-center justify-between bg-blackBG p-4 xl:p-6 xl:px-24 2xl:px-96">
                 <div className="mr-6 flex flex-shrink-0 items-center text-white mx-auto">
                     <span className="text-md font-thin tracking-tight">
                         Nachhilfe in{' '}
@@ -141,7 +141,7 @@ export default function Navbar() {
                     <Link
                         href="/#aboutMe"
                         scroll={false}
-                        className="hover:underline hover:text-green-500"
+                        className="hover:underline hover:text-primary"
                         onClick={closeMenu}
                     >
                         Über mich
@@ -149,7 +149,7 @@ export default function Navbar() {
 
                     <Link
                         href="/#Testimonials"
-                        className="hover:underline hover:text-green-500"
+                        className="hover:underline hover:text-primary"
                         onClick={closeMenu}
                     >
                         Testimonials
@@ -160,14 +160,14 @@ export default function Navbar() {
                     <Link
                         href={'/Online-Nachhilfe'}
                         className="px-2 py-2 h-fit rounded-lg border border-gray-700 bg-gray-700 text-white flex items-center
-                        hover:bg-gray-100 hover:border hover:border-black hover:text-green-500"
+                        hover:bg-gray-100 hover:border hover:border-black hover:text-primary"
                     >
                         <span className='w-full text-sm'>Online Nachhilfe</span>
                         <FiArrowRightCircle className="inline-block ml-2" />
                     </Link>
                     <Link
                         href={'https://matheabicoach.de/'}
-                        className="px-3 py-2 text-sm h-fit border border-green-500 rounded-lg bg-green-500 text-white flex items-center
+                        className="px-3 py-2 text-sm h-fit border border-primary rounded-lg bg-green-500 text-white flex items-center
                         hover:bg-gray-700 hover:border hover:border-black hover:text-white"
                     >
                         Mathe Abi Coach
