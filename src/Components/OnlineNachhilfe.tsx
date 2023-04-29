@@ -7,7 +7,7 @@ export default function Onlinenachhilfe() {
         <div id='Onlinenachhilfe'>
             <section className="px-4 md:px-52 xl:px-24 2xl:px-96">
                 <div className="py-8">
-                    <h1 className=" text-5xl text-green-500">
+                    <h1 className=" text-5xl text-primary">
                         <span className="text-stone-500">Online </span>Nachhilfe
                     </h1>
                     <p className="text-2xl text-stone-500 w-full md:w-1/2 pt-4">
@@ -42,7 +42,7 @@ export default function Onlinenachhilfe() {
                     />
                 </div>
                 <div className="py-4">
-                    <span className="text-green-500 font-semibold text-xl">
+                    <span className="text-primary font-semibold text-xl">
                         {'///'} Hinweis: Vorrausetzung für die Online-Nachhilfe
                     </span>
                     <p className="text-lg text-stone-500">
@@ -73,7 +73,7 @@ function PriceElement({
 }: priceProps) {
     return (
         <div className="bg-gray-100 rounded-md overflow-hidden ">
-            <div className="w-full py-8 text-white bg-green-500 text-center text-3xl font-semibold">
+            <div className="w-full py-8 text-white bg-primary text-center text-3xl font-semibold">
                 <h1>{title}</h1>
             </div>
             <div className="flex flex-col items-center p-8">
@@ -104,7 +104,7 @@ function PriceElement({
                 <Link
                     href={buttonHref}
                     className={`${
-                        leistungen.length < 3 ? 'bg-green-500' : 'bg-gray-500'
+                        leistungen.length < 3 ? 'bg-primary' : 'bg-blackBG'
                     } px-2 py-3 text-center rounded-lg text-white font-semibold`}
                 >
                     Jetzt Buchen! (Hier Klicken!)

@@ -7,7 +7,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 export default function Footer() {
     return (
         <div>
-            <div className="bg-stone-600 w-full grid px-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:px-24 2xl:px-96 justify-items-center py-8 gap-4">
+            <div className="bg-blackBG w-full grid px-2 grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:px-24 2xl:px-96 justify-items-center py-8 gap-4">
                 <div>
                     <Image
                         src={logo as HTMLImageElement}
@@ -75,7 +75,7 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className="grid grid-cols-1 xl:grid-cols-3 xl:px-96 py-8 place-items-center bg-stone-600 border-t border-white text-white gap-4">
+            <div className="grid grid-cols-1 xl:grid-cols-3 xl:px-96 py-8 place-items-center bg-blackBG border-t border-white text-white gap-4">
                 <div>@ 2023 - Nachhilfe Heße</div>
                 <div>
                     <Link href={'/imprint'}>Impressum</Link> |{' '}
@@ -85,7 +85,7 @@ export default function Footer() {
                     Made by{' '}
                     <Link
                         href={'https://www.davidschlueter.com/de'}
-                        className="text-green-500"
+                        className="text-primary"
                     >
                         David Schlueter
                     </Link>

@@ -9,7 +9,7 @@ export default function Referenzen() {
     return (
         <div className="w-full bg-gray-200 flex flex-col justify-center items-center gap-8 py-8">
             <div className="text-2xl md:text-3xl">
-                <span className="text-green-500">{'///'} Referenzen </span>
+                <span className="text-primary">{'///'} Referenzen </span>
                 <span className="text-gray-700">Kooperationen</span>
             </div>
 

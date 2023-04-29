@@ -4,11 +4,11 @@ import { Kachel } from './Kachel';
 export default function Services() {
     return (
         <section className="bg-gray-300 xl:mt-32 flex flex-col items-center justify-center gap-8 py-28">
-            <h5 className="text-green-500 text-xl">
+            <h5 className="text-primary text-xl">
                 {'///'} Leistung | Service
             </h5>
 
-            <h1 className="text-4xl text-gray-600">Warum Nachhilfe Heße? </h1>
+            <h1 className="text-4xl text-blackBG">Warum Nachhilfe Heße? </h1>
             <div className="flex flex-col md:grid md:grid-cols-3 xl:flex-row gap-8 px-4 md:px-8 xl:px-24 2xl:px-96">
                 <Kachel
                     title="Optimal vorbereitet"
