@@ -70,7 +70,7 @@ export default function Navbar() {
     return (
         <nav className="border-b relative">
             <div className="flex flex-wrap items-center justify-between bg-blackBG p-4 xl:p-6 xl:px-24 2xl:px-96">
-                <div className="mr-6 flex flex-shrink-0 items-center text-white mx-auto">
+                <div className="mr-6 flex flex-shrink-0 items-center text-white mx-auto xl:mx-0">
                     <span className="text-md font-thin tracking-tight">
                         Nachhilfe in{' '}
                         <span className="font-semibold">Mathematik</span>,{' '}
@@ -115,7 +115,7 @@ export default function Navbar() {
             <div
                 className={`${
                     isMenuOpen ? 'block' : 'hidden'
-                } xl:flex items-center xl:justify-evenly absolute right-0 w-1/2 xl:w-auto bg-opacity-80 bg-white xl:px-24 2xl:px-96 p-2 xl:bg-transparent xl:py-0 xl:relative`}
+                } xl:flex items-center xl:justify-between absolute right-0 w-1/2 xl:w-auto bg-opacity-80 bg-white xl:px-24 2xl:px-96 p-2 xl:bg-transparent xl:py-0 xl:relative`}
                 style={{
                     zIndex: 10,
                     top: '100%',

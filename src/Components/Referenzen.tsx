@@ -13,7 +13,7 @@ export default function Referenzen() {
                 <span className="text-gray-700">Kooperationen</span>
             </div>
 
-            <div className="grid grid-cols-3 place-items-center">
+            <div className="grid grid-cols-3 xl:gap-20 place-items-center xl:px-96">
                 <Image
                     src={gesu as HTMLImageElement}
                     layout="responsive"
